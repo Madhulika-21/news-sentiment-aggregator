@@ -40,7 +40,7 @@ Frontend runs on http://localhost:5173 and proxies /api requests to the backend.
 
 # Driftwire: Live News Sentiment Aggregator
 
-**Live demo:** https://YOUR-APP.vercel.app
+**Live demo:**  https://news-sentiment-aggregator.vercel.app/
 
 **Backend API:** https://news-sentiment-api-o08i.onrender.com/api/health
 
