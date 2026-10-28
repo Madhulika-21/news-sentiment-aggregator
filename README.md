@@ -38,10 +38,3 @@ npm run dev
 ```
 Frontend runs on http://localhost:5173 and proxies /api requests to the backend.
 
-## Notes for your resume / interview talk track
-- Demonstrates: REST API design, NLP-based sentiment classification,
-  in-memory caching strategy, and a responsive React frontend consuming
-  a live backend.
-- To extend: swap VADER for an LLM API (Claude) for richer summaries,
-  add more RSS sources, or persist articles to a database for historical
-  sentiment trends.
