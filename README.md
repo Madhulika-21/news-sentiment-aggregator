@@ -1,4 +1,4 @@
-# Pulse — Live News Sentiment Aggregator
+# Driftwire: Live News Sentiment Aggregator
 
 A full-stack app that pulls live news headlines and runs each one through
 VADER (a free, offline NLP sentiment analyzer) to classify sentiment and
