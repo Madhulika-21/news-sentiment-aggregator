@@ -1,0 +1,231 @@
+:root {
+  --bg: #F3F0FB;
+  --card: #FFFFFF;
+  --card-soft: #FAF8FF;
+  --ink: #4A4568;
+  --ink-soft: #8B85A6;
+  --line: #E7E1F5;
+  --lavender: #C9BFEE;
+  --lavender-dark: #8A7FC7;
+  --sky: #BBD8F2;
+  --sky-dark: #6FA3D6;
+  --positive: #7FCBA4;
+  --positive-bg: #E3F5EC;
+  --neutral: #F0B26B;
+  --neutral-bg: #FBEFDF;
+  --negative: #EF9AA6;
+  --negative-bg: #FCE9EC;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Quicksand', sans-serif;
+}
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+/* Masthead */
+.masthead {
+  padding: 40px 0 20px;
+}
+
+.masthead-top {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.wordmark {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  color: var(--lavender-dark);
+}
+
+.tagline {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+/* Pulseline reimagined as a soft wave */
+.pulseline {
+  width: 100%;
+  height: 56px;
+  display: block;
+  overflow: visible;
+}
+
+/* Topic nav - pill buttons */
+.topics {
+  display: flex;
+  gap: 8px;
+  padding: 4px 0 20px;
+  overflow-x: auto;
+}
+
+.topic-btn {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: capitalize;
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  color: var(--ink-soft);
+  padding: 9px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.topic-btn:hover {
+  border-color: var(--lavender);
+  color: var(--ink);
+}
+
+.topic-btn.active {
+  background: var(--lavender);
+  color: #FFFFFF;
+  border-color: var(--lavender);
+}
+
+/* Feed */
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 4px;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--card);
+  border-radius: 20px;
+  padding: 18px 20px;
+  border: 1.5px solid var(--line);
+  box-shadow: 0 4px 14px rgba(140, 128, 200, 0.08);
+}
+
+.card-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent, var(--neutral));
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.card-meta .dot { opacity: 0.5; }
+
+.sentiment-tag {
+  margin-left: auto;
+  color: var(--accent-text, var(--neutral));
+  background: var(--accent-bg, var(--neutral-bg));
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+}
+
+.headline {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 1.3;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+
+.headline a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.headline a:hover {
+  color: var(--lavender-dark);
+}
+
+.summary {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* Skeleton loading */
+.skeleton { }
+.skel-bar { width: 12px; height: 12px; border-radius: 50%; background: var(--line); margin-top: 8px; }
+.skel-line {
+  height: 13px;
+  background: var(--line);
+  border-radius: 8px;
+  margin-top: 10px;
+  animation: pulse 1.4s ease-in-out infinite;
+}
+.skel-line.w70 { width: 70%; }
+.skel-line.w40 { width: 40%; }
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.error-banner {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--negative);
+  background: var(--negative-bg);
+  border: 1.5px solid var(--negative);
+  padding: 12px 18px;
+  border-radius: 14px;
+}
+
+.empty {
+  color: var(--ink-soft);
+  font-size: 14px;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1.5px solid var(--line);
+  font-size: 12px;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skel-line { animation: none; }
+}
